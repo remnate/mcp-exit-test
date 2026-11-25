@@ -1,0 +1,31 @@
+name: Linux fixture lifetimes
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  witness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - run: npm install --global npm@11.21.0 @openai/codex@0.171.0
+      - run: |
+          python -m pip wheel -w "$RUNNER_TEMP/wheels" .
+          python -m pip install --no-index --find-links "$RUNNER_TEMP/wheels" mcp-exit-test==0.1.0
+          cp -R src/mcp_exit_test/sdk "$RUNNER_TEMP/sdk"
+          npm ci --prefix "$RUNNER_TEMP/sdk" --ignore-scripts --no-audit --no-fund
+      - run: |
+          cd "$RUNNER_TEMP"
+          python -m unittest discover -s "$GITHUB_WORKSPACE/tests" -v
+          python "$GITHUB_WORKSPACE/tests/release.py" --sdk-dir "$RUNNER_TEMP/sdk" --out "$RUNNER_TEMP/results"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: registered-process-evidence
+          path: ${{ runner.temp }}/results

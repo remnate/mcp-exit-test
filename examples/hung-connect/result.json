@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 0,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00082,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064590,
+        "state": "R",
+        "ppid": 1064573,
+        "pgid": 1064590,
+        "sid": 1064590,
+        "start_ticks": 1060065
+      }
+    },
+    {
+      "t": 0.00083,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.2205,
+      "event": "birth",
+      "instance": "84a7f681-4cd5-487c-841a-60b9a2374dfe",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064615,
+        "state": "S",
+        "ppid": 1064590,
+        "pgid": 1064590,
+        "sid": 1064590,
+        "start_ticks": 1060080
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.22402,
+      "event": "initialize_response",
+      "instance": "84a7f681-4cd5-487c-841a-60b9a2374dfe",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.23911,
+      "event": "initialized",
+      "instance": "84a7f681-4cd5-487c-841a-60b9a2374dfe",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.26969,
+      "event": "birth",
+      "instance": "84a7f681-4cd5-487c-841a-60b9a2374dfe",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1064632,
+        "state": "S",
+        "ppid": 1064615,
+        "pgid": 1064632,
+        "sid": 1064632,
+        "start_ticks": 1060087
+      },
+      "ancestry": []
+    },
+    {
+      "t": 10.01083,
+      "event": "verdict",
+      "verdict": "inconclusive"
+    },
+    {
+      "t": 10.01107,
+      "event": "cleanup_signal",
+      "role": "1/84a7f681-4cd5-487c-841a-60b9a2374dfe/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 10.0111,
+      "event": "cleanup_signal",
+      "role": "1/84a7f681-4cd5-487c-841a-60b9a2374dfe/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 10.01112,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [],
+  "boot_tag": "1c32c0f8ed4c78f1",
+  "verdict": "inconclusive",
+  "reason": "Operation or scenario deadline expired",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "$defs": {
+    "ClientCapabilities": {
+      "description": "Capabilities a client may support. Known capabilities are defined here, in this schema, but this is not a closed set: any client can define its own, additional capabilities.",
+      "properties": {
+        "elicitation": {
+          "description": "Present if the client supports elicitation from the server.",
+          "properties": {
+            "form": {
+              "additionalProperties": true,
+              "properties": {},
+              "type": "object"
+            },
+            "url": {
+              "additionalProperties": true,
+              "properties": {},
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "experimental": {
+          "additionalProperties": {
+            "additionalProperties": true,
+            "properties": {},
+            "type": "object"
+          },
+          "description": "Experimental, non-standard capabilities that the client supports.",
+          "type": "object"
+        },
+        "roots": {
+          "description": "Present if the client supports listing roots.",
+          "properties": {
+            "listChanged": {
+              "description": "Whether the client supports notifications for changes to the roots list.",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "sampling": {
+          "description": "Present if the client supports sampling from an LLM.",
+          "properties": {
+            "context": {
+              "additionalProperties": true,
+              "description": "Whether the client supports context inclusion via includeContext parameter.\nIf not declared, servers SHOULD only use `includeContext: \"none\"` (or omit it).",
+              "properties": {},
+              "type": "object"
+            },
+            "tools": {
+              "additionalProperties": true,
+              "description": "Whether the client supports tool use via tools and toolChoice parameters.",
+              "properties": {},
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "tasks": {
+          "description": "Present if the client supports task-augmented requests.",
+          "properties": {
+            "cancel": {
+              "additionalProperties": true,
+              "description": "Whether this client supports tasks/cancel.",
+              "properties": {},
+              "type": "object"
+            },
+            "list": {
+              "additionalProperties": true,
+              "description": "Whether this client supports tasks/list.",
+              "properties": {},
+              "type": "object"
+            },
+            "requests": {
+              "description": "Specifies which request types can be augmented with tasks.",
+              "properties": {
+                "elicitation": {
+                  "description": "Task support for elicitation-related requests.",
+                  "properties": {
+                    "create": {
+                      "additionalProperties": true,
+                      "description": "Whether the client supports task-augmented elicitation/create requests.",
+                      "properties": {},
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                },
+                "sampling": {
+                  "description": "Task support for sampling-related requests.",
+                  "properties": {
+                    "createMessage": {
+                      "additionalProperties": true,
+                      "description": "Whether the client supports task-augmented sampling/createMessage requests.",
+                      "properties": {},
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Icon": {
+      "description": "An optionally-sized icon that can be displayed in a user interface.",
+      "properties": {
+        "mimeType": {
+          "description": "Optional MIME type override if the source MIME type is missing or generic.\nFor example: `\"image/png\"`, `\"image/jpeg\"`, or `\"image/svg+xml\"`.",
+          "type": "string"
+        },
+        "sizes": {
+          "description": "Optional array of strings that specify sizes at which the icon can be used.\nEach string should be in WxH format (e.g., `\"48x48\"`, `\"96x96\"`) or `\"any\"` for scalable formats like SVG.\n\nIf not provided, the client should assume that the icon can be used at any size.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "src": {
+          "description": "A standard URI pointing to an icon resource. May be an HTTP/HTTPS URL or a\n`data:` URI with Base64-encoded image data.\n\nConsumers SHOULD takes steps to ensure URLs serving icons are from the\nsame domain as the client/server or a trusted domain.\n\nConsumers SHOULD take appropriate precautions when consuming SVGs as they can contain\nexecutable JavaScript.",
+          "format": "uri",
+          "type": "string"
+        },
+        "theme": {
+          "description": "Optional specifier for the theme this icon is designed for. `light` indicates\nthe icon is designed to be used with a light background, and `dark` indicates\nthe icon is designed to be used with a dark background.\n\nIf not provided, the client should assume the icon can be used with any theme.",
+          "enum": [
+            "dark",
+            "light"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "src"
+      ],
+      "type": "object"
+    },
+    "Implementation": {
+      "description": "Describes the MCP implementation.",
+      "properties": {
+        "description": {
+          "description": "An optional human-readable description of what this implementation does.\n\nThis can be used by clients or servers to provide context about their purpose\nand capabilities. For example, a server might describe the types of resources\nor tools it provides, while a client might describe its intended use case.",
+          "type": "string"
+        },
+        "icons": {
+          "description": "Optional set of sized icons that the client can display in a user interface.\n\nClients that support rendering icons MUST support at least the following MIME types:\n- `image/png` - PNG images (safe, universal compatibility)\n- `image/jpeg` (and `image/jpg`) - JPEG images (safe, universal compatibility)\n\nClients that support rendering icons SHOULD also support:\n- `image/svg+xml` - SVG images (scalable but requires security precautions)\n- `image/webp` - WebP images (modern, efficient format)",
+          "items": {
+            "$ref": "#/$defs/Icon"
+          },
+          "type": "array"
+        },
+        "name": {
+          "description": "Intended for programmatic or logical use, but used as a display name in past specs or fallback (if title isn't present).",
+          "type": "string"
+        },
+        "title": {
+          "description": "Intended for UI and end-user contexts — optimized to be human-readable and easily understood,\neven by those unfamiliar with domain-specific terminology.\n\nIf not provided, the name should be used for display (except for Tool,\nwhere `annotations.title` should be given precedence over using `name`,\nif present).",
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "websiteUrl": {
+          "description": "An optional URL of the website for this implementation.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ],
+      "type": "object"
+    },
+    "InitializeRequest": {
+      "description": "This request is sent from the client to the server when it first connects, asking it to begin initialization.",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/RequestId"
+        },
+        "jsonrpc": {
+          "const": "2.0",
+          "type": "string"
+        },
+        "method": {
+          "const": "initialize",
+          "type": "string"
+        },
+        "params": {
+          "$ref": "#/$defs/InitializeRequestParams"
+        }
+      },
+      "required": [
+        "id",
+        "jsonrpc",
+        "method",
+        "params"
+      ],
+      "type": "object"
+    },
+    "InitializeRequestParams": {
+      "description": "Parameters for an `initialize` request.",
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-11-25/basic/index#meta) for notes on `_meta` usage.",
+          "properties": {
+            "progressToken": {
+              "$ref": "#/$defs/ProgressToken",
+              "description": "If specified, the caller is requesting out-of-band progress notifications for this request (as represented by notifications/progress). The value of this parameter is an opaque token that will be attached to any subsequent notifications. The receiver is not obligated to provide these notifications."
+            }
+          },
+          "type": "object"
+        },
+        "capabilities": {
+          "$ref": "#/$defs/ClientCapabilities"
+        },
+        "clientInfo": {
+          "$ref": "#/$defs/Implementation"
+        },
+        "protocolVersion": {
+          "description": "The latest version of the Model Context Protocol that the client supports. The client MAY decide to support older versions as well.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "capabilities",
+        "clientInfo",
+        "protocolVersion"
+      ],
+      "type": "object"
+    },
+    "InitializedNotification": {
+      "description": "This notification is sent from the client to the server after initialization has finished.",
+      "properties": {
+        "jsonrpc": {
+          "const": "2.0",
+          "type": "string"
+        },
+        "method": {
+          "const": "notifications/initialized",
+          "type": "string"
+        },
+        "params": {
+          "$ref": "#/$defs/NotificationParams"
+        }
+      },
+      "required": [
+        "jsonrpc",
+        "method"
+      ],
+      "type": "object"
+    },
+    "JSONRPCNotification": {
+      "description": "A notification which does not expect a response.",
+      "properties": {
+        "jsonrpc": {
+          "const": "2.0",
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": {},
+          "type": "object"
+        }
+      },
+      "required": [
+        "jsonrpc",
+        "method"
+      ],
+      "type": "object"
+    },
+    "JSONRPCRequest": {
+      "description": "A request that expects a response.",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/RequestId"
+        },
+        "jsonrpc": {
+          "const": "2.0",
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": {},
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "jsonrpc",
+        "method"
+      ],
+      "type": "object"
+    },
+    "NotificationParams": {
+      "properties": {
+        "_meta": {
+          "additionalProperties": {},
+          "description": "See [General fields: `_meta`](/specification/2025-11-25/basic/index#meta) for notes on `_meta` usage.",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "ProgressToken": {
+      "description": "A progress token, used to associate progress notifications with the original request.",
+      "type": [
+        "string",
+        "integer"
+      ]
+    },
+    "RequestId": {
+      "description": "A uniquely identifying ID for a request in JSON-RPC.",
+      "type": [
+        "string",
+        "integer"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

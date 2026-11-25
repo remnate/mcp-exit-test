@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="mcp-exit-test" tests="2" failures="1" skipped="0" errors="0"><testcase name="registered-fixture-pairs" classname="sdk.direct.clean"><failure message="Two calls returned the same unexpected verified fixture" /></testcase><testcase name="owned-process-cleanup" /></testsuite>

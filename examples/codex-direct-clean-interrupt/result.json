@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "codex",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "interrupt",
+  "reconnects": 0,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00083,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1063929,
+        "state": "R",
+        "ppid": 1063890,
+        "pgid": 1063929,
+        "sid": 1063929,
+        "start_ticks": 1055855
+      }
+    },
+    {
+      "t": 0.00084,
+      "event": "request",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.07669,
+      "event": "response",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.07673,
+      "event": "request",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.07855,
+      "event": "response",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.07858,
+      "event": "request",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.08587,
+      "event": "response",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.08588,
+      "event": "thread_started",
+      "thread": "01a212d9-bdf5-7bd0-b1b7-86da3747c01f"
+    },
+    {
+      "t": 0.08589,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.14677,
+      "event": "birth",
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064043,
+        "state": "S",
+        "ppid": 1063929,
+        "pgid": 1064043,
+        "sid": 1063929,
+        "start_ticks": 1055863
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.14771,
+      "event": "initialize_response",
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.14803,
+      "event": "initialized",
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.1488,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.14882,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.14973,
+      "event": "who_called",
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.14995,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.16419,
+      "event": "birth",
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1064069,
+        "state": "S",
+        "ppid": 1064043,
+        "pgid": 1064069,
+        "sid": 1064069,
+        "start_ticks": 1055869
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.17045,
+      "event": "who",
+      "generation": 1,
+      "instance": "c72f5388-a617-4d96-a881-d46bd56ee7a7"
+    },
+    {
+      "t": 0.17051,
+      "event": "exit_requested",
+      "trigger": "host SIGTERM"
+    },
+    {
+      "t": 0.17667,
+      "event": "driver_exit",
+      "status": 0
+    },
+    {
+      "t": 5.17104,
+      "event": "verdict",
+      "verdict": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "host SIGTERM",
+      "start": 0.17052,
+      "elapsed": 5.00044,
+      "samples": 51,
+      "states": {
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/server": "gone",
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/child": "gone",
+        "driver": "gone"
+      },
+      "clear_samples": {
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/server": 50,
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/child": 50,
+        "driver": 50
+      },
+      "clear_after": {
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/server": 0.10034,
+        "1/c72f5388-a617-4d96-a881-d46bd56ee7a7/child": 0.10034,
+        "driver": 0.10034
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    }
+  ],
+  "boot_tag": "5806b64773eaa8e6",
+  "verdict": "pass",
+  "reason": "Registered fixture pairs met their retirement deadlines",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

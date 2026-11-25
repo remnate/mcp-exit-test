@@ -1,0 +1,677 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "codex",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 3,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00089,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1062651,
+        "state": "R",
+        "ppid": 1062650,
+        "pgid": 1062651,
+        "sid": 1062651,
+        "start_ticks": 1051762
+      }
+    },
+    {
+      "t": 0.0009,
+      "event": "request",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.06895,
+      "event": "response",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.06901,
+      "event": "request",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.07127,
+      "event": "response",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.0713,
+      "event": "request",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.07933,
+      "event": "response",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.07935,
+      "event": "thread_started",
+      "thread": "01a212d9-1e14-7e62-9e0f-ec41c3260f65"
+    },
+    {
+      "t": 0.07935,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.1404,
+      "event": "birth",
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1062736,
+        "state": "S",
+        "ppid": 1062651,
+        "pgid": 1062736,
+        "sid": 1062651,
+        "start_ticks": 1051770
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.14144,
+      "event": "initialize_response",
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.14186,
+      "event": "initialized",
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.14266,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.14268,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.14323,
+      "event": "who_called",
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.1434,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.15817,
+      "event": "birth",
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1062756,
+        "state": "S",
+        "ppid": 1062736,
+        "pgid": 1062756,
+        "sid": 1062756,
+        "start_ticks": 1051776
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.16443,
+      "event": "who",
+      "generation": 1,
+      "instance": "be255172-94fa-4112-b0fb-7f6a03f13f35"
+    },
+    {
+      "t": 0.16462,
+      "event": "request",
+      "method": "config/mcpServer/reload",
+      "request": 6
+    },
+    {
+      "t": 0.16773,
+      "event": "response",
+      "method": "config/mcpServer/reload",
+      "request": 6
+    },
+    {
+      "t": 0.16776,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 7
+    },
+    {
+      "t": 0.2305,
+      "event": "birth",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "role": "server",
+      "identity": {
+        "pid": 1062759,
+        "state": "S",
+        "ppid": 1062651,
+        "pgid": 1062759,
+        "sid": 1062651,
+        "start_ticks": 1051779
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.23135,
+      "event": "initialize_response",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.23165,
+      "event": "initialized",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.23233,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 7
+    },
+    {
+      "t": 0.23234,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 8
+    },
+    {
+      "t": 0.23299,
+      "event": "who_called",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 0.23321,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 8
+    },
+    {
+      "t": 0.2476,
+      "event": "birth",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "role": "child",
+      "identity": {
+        "pid": 1062760,
+        "state": "S",
+        "ppid": 1062759,
+        "pgid": 1062760,
+        "sid": 1062760,
+        "start_ticks": 1051785
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.25384,
+      "event": "who",
+      "generation": 2,
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4"
+    },
+    {
+      "t": 5.1687,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 9
+    },
+    {
+      "t": 5.1698,
+      "event": "who_called",
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 5.17014,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 9
+    },
+    {
+      "t": 5.1702,
+      "event": "who",
+      "generation": 2,
+      "instance": "4574c30d-e39e-443e-98cf-5d0cd151b6b4"
+    },
+    {
+      "t": 5.17033,
+      "event": "request",
+      "method": "config/mcpServer/reload",
+      "request": 10
+    },
+    {
+      "t": 5.17236,
+      "event": "response",
+      "method": "config/mcpServer/reload",
+      "request": 10
+    },
+    {
+      "t": 5.17239,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 11
+    },
+    {
+      "t": 5.23488,
+      "event": "birth",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "role": "server",
+      "identity": {
+        "pid": 1062775,
+        "state": "S",
+        "ppid": 1062651,
+        "pgid": 1062775,
+        "sid": 1062651,
+        "start_ticks": 1052280
+      },
+      "ancestry": []
+    },
+    {
+      "t": 5.23584,
+      "event": "initialize_response",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 5.23613,
+      "event": "initialized",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 5.23656,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 11
+    },
+    {
+      "t": 5.23657,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 12
+    },
+    {
+      "t": 5.23737,
+      "event": "who_called",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "protocol": null
+    },
+    {
+      "t": 5.23762,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 12
+    },
+    {
+      "t": 5.25282,
+      "event": "birth",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "role": "child",
+      "identity": {
+        "pid": 1062776,
+        "state": "S",
+        "ppid": 1062775,
+        "pgid": 1062776,
+        "sid": 1062776,
+        "start_ticks": 1052286
+      },
+      "ancestry": []
+    },
+    {
+      "t": 5.25808,
+      "event": "who",
+      "generation": 3,
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33"
+    },
+    {
+      "t": 10.17272,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 13
+    },
+    {
+      "t": 10.17355,
+      "event": "who_called",
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33",
+      "generation": 3,
+      "protocol": null
+    },
+    {
+      "t": 10.17376,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 13
+    },
+    {
+      "t": 10.17382,
+      "event": "who",
+      "generation": 3,
+      "instance": "4c71f6d8-6a4d-495a-a566-7da49de0aa33"
+    },
+    {
+      "t": 10.17394,
+      "event": "request",
+      "method": "config/mcpServer/reload",
+      "request": 14
+    },
+    {
+      "t": 10.17648,
+      "event": "response",
+      "method": "config/mcpServer/reload",
+      "request": 14
+    },
+    {
+      "t": 10.1765,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 15
+    },
+    {
+      "t": 10.24785,
+      "event": "birth",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "role": "server",
+      "identity": {
+        "pid": 1062850,
+        "state": "S",
+        "ppid": 1062651,
+        "pgid": 1062850,
+        "sid": 1062651,
+        "start_ticks": 1052780
+      },
+      "ancestry": []
+    },
+    {
+      "t": 10.24912,
+      "event": "initialize_response",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 10.24961,
+      "event": "initialized",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 10.25044,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 15
+    },
+    {
+      "t": 10.25046,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 16
+    },
+    {
+      "t": 10.25159,
+      "event": "who_called",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "protocol": null
+    },
+    {
+      "t": 10.25192,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 16
+    },
+    {
+      "t": 10.27045,
+      "event": "birth",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "role": "child",
+      "identity": {
+        "pid": 1062862,
+        "state": "S",
+        "ppid": 1062850,
+        "pgid": 1062862,
+        "sid": 1062862,
+        "start_ticks": 1052787
+      },
+      "ancestry": []
+    },
+    {
+      "t": 10.27278,
+      "event": "who",
+      "generation": 4,
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5"
+    },
+    {
+      "t": 15.17705,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 17
+    },
+    {
+      "t": 15.17791,
+      "event": "who_called",
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5",
+      "generation": 4,
+      "protocol": null
+    },
+    {
+      "t": 15.17821,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 17
+    },
+    {
+      "t": 15.17834,
+      "event": "who",
+      "generation": 4,
+      "instance": "99f23199-d531-498e-91f4-3133000c94a5"
+    },
+    {
+      "t": 15.17842,
+      "event": "exit_requested",
+      "trigger": "driver input EOF"
+    },
+    {
+      "t": 15.18467,
+      "event": "driver_exit",
+      "status": 0
+    },
+    {
+      "t": 20.17925,
+      "event": "verdict",
+      "verdict": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "configuration reconnect",
+      "start": 0.16775,
+      "elapsed": 5.00082,
+      "samples": 51,
+      "states": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": "gone",
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": "gone"
+      },
+      "clear_samples": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 50,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 50
+      },
+      "clear_after": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 0.10122,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 0.10122
+      },
+      "current_at_deadline": {
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": "active",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    },
+    {
+      "trigger": "configuration reconnect",
+      "start": 5.17238,
+      "elapsed": 5.00021,
+      "samples": 51,
+      "states": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": "gone",
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": "gone"
+      },
+      "clear_samples": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 51,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 51,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 50,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 50
+      },
+      "clear_after": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 7e-05,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 7e-05,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 0.10086,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 0.10086
+      },
+      "current_at_deadline": {
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": "active",
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    },
+    {
+      "trigger": "configuration reconnect",
+      "start": 10.17649,
+      "elapsed": 5.00039,
+      "samples": 51,
+      "states": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": "gone",
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": "gone",
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": "gone",
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": "gone"
+      },
+      "clear_samples": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 51,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 51,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 51,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 51,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": 50,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": 50
+      },
+      "clear_after": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 7e-05,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 7e-05,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 7e-05,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 7e-05,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": 0.10044,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": 0.10044
+      },
+      "current_at_deadline": {
+        "4/99f23199-d531-498e-91f4-3133000c94a5/server": "active",
+        "4/99f23199-d531-498e-91f4-3133000c94a5/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    },
+    {
+      "trigger": "driver input EOF",
+      "start": 15.17843,
+      "elapsed": 5.00071,
+      "samples": 51,
+      "states": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": "gone",
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": "gone",
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": "gone",
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": "gone",
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": "gone",
+        "4/99f23199-d531-498e-91f4-3133000c94a5/server": "gone",
+        "4/99f23199-d531-498e-91f4-3133000c94a5/child": "gone",
+        "driver": "gone"
+      },
+      "clear_samples": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 51,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 51,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 51,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 51,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": 51,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": 51,
+        "4/99f23199-d531-498e-91f4-3133000c94a5/server": 50,
+        "4/99f23199-d531-498e-91f4-3133000c94a5/child": 50,
+        "driver": 50
+      },
+      "clear_after": {
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/server": 4e-05,
+        "1/be255172-94fa-4112-b0fb-7f6a03f13f35/child": 4e-05,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/server": 4e-05,
+        "2/4574c30d-e39e-443e-98cf-5d0cd151b6b4/child": 4e-05,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/server": 4e-05,
+        "3/4c71f6d8-6a4d-495a-a566-7da49de0aa33/child": 4e-05,
+        "4/99f23199-d531-498e-91f4-3133000c94a5/server": 0.1004,
+        "4/99f23199-d531-498e-91f4-3133000c94a5/child": 0.1004,
+        "driver": 0.1004
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    }
+  ],
+  "boot_tag": "d7efa0f7ba3a4186",
+  "verdict": "pass",
+  "reason": "Registered fixture pairs met their retirement deadlines",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

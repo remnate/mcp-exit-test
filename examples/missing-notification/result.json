@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 0.6,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00078,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064931,
+        "state": "R",
+        "ppid": 1064930,
+        "pgid": 1064931,
+        "sid": 1064931,
+        "start_ticks": 1062144
+      }
+    },
+    {
+      "t": 0.00081,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.14813,
+      "event": "birth",
+      "instance": "4c977614-1ee2-44e6-8924-163f6bd1023c",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064938,
+        "state": "S",
+        "ppid": 1064931,
+        "pgid": 1064931,
+        "sid": 1064931,
+        "start_ticks": 1062153
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.14913,
+      "event": "initialize_response",
+      "instance": "4c977614-1ee2-44e6-8924-163f6bd1023c",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.15123,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.15124,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.15259,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.15262,
+      "event": "verdict",
+      "verdict": "inconclusive"
+    },
+    {
+      "t": 0.15293,
+      "event": "cleanup_signal",
+      "role": "1/4c977614-1ee2-44e6-8924-163f6bd1023c/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.15297,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [],
+  "boot_tag": "60421a501f016c47",
+  "verdict": "inconclusive",
+  "reason": "Fixture tool call returned an error",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

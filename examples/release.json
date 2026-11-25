@@ -1,0 +1,44 @@
+{
+  "versions": {
+    "node": "v24.14.0",
+    "npm": "11.21.0",
+    "codex": "codex-cli 0.171.0",
+    "sdk": "1.32.2",
+    "python": "3.14.10",
+    "linux": "7.3.5-arch1-1"
+  },
+  "sentinel_birth": {
+    "pid": 1062649,
+    "state": "R",
+    "ppid": 1062443,
+    "pgid": 1062649,
+    "sid": 1062649,
+    "start_ticks": 1051754
+  },
+  "sentinel_after_all_checks": "active",
+  "scenarios": [
+    "codex-direct-clean-eof",
+    "codex-direct-clean-interrupt",
+    "codex-npm-clean-eof",
+    "empty-client-info",
+    "extended-handshake",
+    "hung-close",
+    "hung-connect",
+    "id-in-notification",
+    "interrupted-observer",
+    "late-invalid-notification",
+    "legacy-poll",
+    "missing-initialize",
+    "missing-notification",
+    "response-in-request",
+    "scalar-notification",
+    "sdk-direct-clean-eof",
+    "sdk-direct-survive-eof",
+    "sdk-npm-clean-eof",
+    "survivor-timeout-default",
+    "survivor-timeout-strict",
+    "unbound-uuid",
+    "verified-stale"
+  ],
+  "registered_post_cleanup_identities_remaining": 0
+}

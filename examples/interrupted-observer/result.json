@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "codex",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 3,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00218,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064410,
+        "state": "R",
+        "ppid": 1064393,
+        "pgid": 1064410,
+        "sid": 1064410,
+        "start_ticks": 1060016
+      }
+    },
+    {
+      "t": 0.00219,
+      "event": "request",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.12288,
+      "event": "response",
+      "method": "initialize",
+      "request": 1
+    },
+    {
+      "t": 0.12292,
+      "event": "request",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.1255,
+      "event": "response",
+      "method": "config/read",
+      "request": 2
+    },
+    {
+      "t": 0.12553,
+      "event": "request",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.13233,
+      "event": "response",
+      "method": "thread/start",
+      "request": 3
+    },
+    {
+      "t": 0.13234,
+      "event": "thread_started",
+      "thread": "01a212da-60af-70a2-b3e8-d46033aa11dc"
+    },
+    {
+      "t": 0.13234,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.22639,
+      "event": "birth",
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064509,
+        "state": "S",
+        "ppid": 1064410,
+        "pgid": 1064509,
+        "sid": 1064410,
+        "start_ticks": 1060029
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.22725,
+      "event": "initialize_response",
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.22764,
+      "event": "initialized",
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74",
+      "generation": 1,
+      "protocol": "2025-06-18"
+    },
+    {
+      "t": 0.22839,
+      "event": "response",
+      "method": "mcpServerStatus/list",
+      "request": 4
+    },
+    {
+      "t": 0.22841,
+      "event": "request",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.2293,
+      "event": "who_called",
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.22952,
+      "event": "response",
+      "method": "mcpServer/tool/call",
+      "request": 5
+    },
+    {
+      "t": 0.24451,
+      "event": "birth",
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1064550,
+        "state": "S",
+        "ppid": 1064509,
+        "pgid": 1064550,
+        "sid": 1064550,
+        "start_ticks": 1060038
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.24974,
+      "event": "who",
+      "generation": 1,
+      "instance": "4a00c917-77c5-456d-83b3-bef014568c74"
+    },
+    {
+      "t": 0.24991,
+      "event": "request",
+      "method": "config/mcpServer/reload",
+      "request": 6
+    },
+    {
+      "t": 0.25207,
+      "event": "response",
+      "method": "config/mcpServer/reload",
+      "request": 6
+    },
+    {
+      "t": 0.2521,
+      "event": "request",
+      "method": "mcpServerStatus/list",
+      "request": 7
+    },
+    {
+      "t": 0.26622,
+      "event": "verdict",
+      "verdict": "inconclusive"
+    },
+    {
+      "t": 0.26671,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [],
+  "boot_tag": "50004ed21430885d",
+  "verdict": "inconclusive",
+  "reason": "Observer interrupted",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

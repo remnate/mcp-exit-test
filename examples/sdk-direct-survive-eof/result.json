@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "survive",
+  "exit": "eof",
+  "reconnects": 0,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00081,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064358,
+        "state": "R",
+        "ppid": 1064357,
+        "pgid": 1064358,
+        "sid": 1064358,
+        "start_ticks": 1059479
+      }
+    },
+    {
+      "t": 0.00082,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.16354,
+      "event": "birth",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064365,
+        "state": "S",
+        "ppid": 1064358,
+        "pgid": 1064358,
+        "sid": 1064358,
+        "start_ticks": 1059488
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.16454,
+      "event": "initialize_response",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.16791,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.16793,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.1683,
+      "event": "initialized",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.16845,
+      "event": "who_called",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.16935,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.18158,
+      "event": "birth",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1064366,
+        "state": "S",
+        "ppid": 1064365,
+        "pgid": 1064366,
+        "sid": 1064366,
+        "start_ticks": 1059495
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.1898,
+      "event": "who",
+      "generation": 1,
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42"
+    },
+    {
+      "t": 0.18982,
+      "event": "request",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.1906,
+      "event": "eof",
+      "instance": "6bd6b8df-dea8-4486-b268-de319c6dbb42",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.20093,
+      "event": "response",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 5.20169,
+      "event": "verdict",
+      "verdict": "fail"
+    },
+    {
+      "t": 5.20207,
+      "event": "cleanup_signal",
+      "role": "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 5.2021,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "explicit SDK disconnect",
+      "start": 0.20095,
+      "elapsed": 5.00054,
+      "samples": 51,
+      "states": {
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/server": "gone",
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/child": "active"
+      },
+      "clear_samples": {
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/server": 51,
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/child": 0
+      },
+      "clear_after": {
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/server": 3e-05
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {
+        "1/6bd6b8df-dea8-4486-b268-de319c6dbb42/child": {
+          "pid": 1064366,
+          "state": "S",
+          "ppid": 1057901,
+          "pgid": 1064366,
+          "sid": 1064366,
+          "start_ticks": 1059495
+        }
+      },
+      "verdict": "fail",
+      "reason": "Registered identity active at retirement deadline"
+    }
+  ],
+  "boot_tag": "a1f809fae2b82fe2",
+  "verdict": "fail",
+  "reason": "Registered identity active at retirement deadline",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

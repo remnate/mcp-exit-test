@@ -1,0 +1,387 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "npm",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 5,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.21426,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064204,
+        "state": "R",
+        "ppid": 1064191,
+        "pgid": 1064204,
+        "sid": 1064204,
+        "start_ticks": 1057933
+      }
+    },
+    {
+      "t": 0.21427,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.50586,
+      "event": "birth",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064224,
+        "state": "S",
+        "ppid": 1064212,
+        "pgid": 1064204,
+        "sid": 1064204,
+        "start_ticks": 1057955
+      },
+      "ancestry": [
+        {
+          "pid": 1064212,
+          "state": "S",
+          "ppid": 1064204,
+          "pgid": 1064204,
+          "sid": 1064204,
+          "start_ticks": 1057942
+        }
+      ]
+    },
+    {
+      "t": 0.50678,
+      "event": "initialize_response",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.51014,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.51015,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.51055,
+      "event": "initialized",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.51072,
+      "event": "who_called",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.51174,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.52328,
+      "event": "birth",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1064226,
+        "state": "S",
+        "ppid": 1064224,
+        "pgid": 1064226,
+        "sid": 1064226,
+        "start_ticks": 1057962
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.53357,
+      "event": "who",
+      "generation": 1,
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3"
+    },
+    {
+      "t": 0.53366,
+      "event": "request",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.53449,
+      "event": "eof",
+      "instance": "79a186f9-6370-41c1-9cc0-8f617b4bb5e3",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.55176,
+      "event": "response",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.55178,
+      "event": "request",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.74715,
+      "event": "birth",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "role": "server",
+      "identity": {
+        "pid": 1064239,
+        "state": "S",
+        "ppid": 1064227,
+        "pgid": 1064204,
+        "sid": 1064204,
+        "start_ticks": 1057980
+      },
+      "ancestry": [
+        {
+          "pid": 1064227,
+          "state": "S",
+          "ppid": 1064204,
+          "pgid": 1064204,
+          "sid": 1064204,
+          "start_ticks": 1057967
+        }
+      ]
+    },
+    {
+      "t": 0.74823,
+      "event": "initialize_response",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.74837,
+      "event": "response",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.74837,
+      "event": "request",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.74863,
+      "event": "initialized",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.74879,
+      "event": "who_called",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 0.74929,
+      "event": "response",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.76511,
+      "event": "birth",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "role": "child",
+      "identity": {
+        "pid": 1064240,
+        "state": "S",
+        "ppid": 1064239,
+        "pgid": 1064240,
+        "sid": 1064240,
+        "start_ticks": 1057986
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.77044,
+      "event": "who",
+      "generation": 2,
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346"
+    },
+    {
+      "t": 5.55259,
+      "event": "request",
+      "method": "who",
+      "request": 6
+    },
+    {
+      "t": 5.55324,
+      "event": "who_called",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 5.55382,
+      "event": "response",
+      "method": "who",
+      "request": 6
+    },
+    {
+      "t": 5.55396,
+      "event": "who",
+      "generation": 2,
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346"
+    },
+    {
+      "t": 5.55398,
+      "event": "request",
+      "method": "close",
+      "request": 7
+    },
+    {
+      "t": 5.55445,
+      "event": "eof",
+      "instance": "7e136f17-ab27-4e6d-8471-6acea7c06346",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 5.5729,
+      "event": "response",
+      "method": "close",
+      "request": 7
+    },
+    {
+      "t": 10.5738,
+      "event": "exit_requested",
+      "trigger": "driver input EOF"
+    },
+    {
+      "t": 10.57757,
+      "event": "driver_exit",
+      "status": 0
+    },
+    {
+      "t": 15.57502,
+      "event": "verdict",
+      "verdict": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "SDK client.close",
+      "start": 0.55177,
+      "elapsed": 5.00068,
+      "samples": 51,
+      "states": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": "gone",
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": "gone"
+      },
+      "clear_samples": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 51,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 51
+      },
+      "clear_after": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 5e-05,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 5e-05
+      },
+      "current_at_deadline": {
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": "active",
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    },
+    {
+      "trigger": "explicit SDK disconnect",
+      "start": 5.57292,
+      "elapsed": 5.00077,
+      "samples": 51,
+      "states": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": "gone",
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": "gone",
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": "gone",
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": "gone"
+      },
+      "clear_samples": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 51,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 51,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": 51,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": 51
+      },
+      "clear_after": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 2e-05,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 2e-05,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": 2e-05,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": 2e-05
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    },
+    {
+      "trigger": "driver input EOF",
+      "start": 10.57381,
+      "elapsed": 5.00114,
+      "samples": 51,
+      "states": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": "gone",
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": "gone",
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": "gone",
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": "gone",
+        "driver": "gone"
+      },
+      "clear_samples": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 51,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 51,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": 51,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": 51,
+        "driver": 50
+      },
+      "clear_after": {
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/server": 2e-05,
+        "1/79a186f9-6370-41c1-9cc0-8f617b4bb5e3/child": 2e-05,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/server": 2e-05,
+        "2/7e136f17-ab27-4e6d-8471-6acea7c06346/child": 2e-05,
+        "driver": 0.10093
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    }
+  ],
+  "boot_tag": "26a58d22dce65267",
+  "verdict": "pass",
+  "reason": "Registered fixture pairs met their retirement deadlines",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

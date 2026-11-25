@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "survive",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 0.6,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00083,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1065089,
+        "state": "R",
+        "ppid": 1065088,
+        "pgid": 1065089,
+        "sid": 1065089,
+        "start_ticks": 1063939
+      }
+    },
+    {
+      "t": 0.00084,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.15421,
+      "event": "birth",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1065097,
+        "state": "S",
+        "ppid": 1065089,
+        "pgid": 1065089,
+        "sid": 1065089,
+        "start_ticks": 1063948
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.15511,
+      "event": "initialize_response",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.1586,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.15862,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.15897,
+      "event": "initialized",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.15942,
+      "event": "who_called",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.16046,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.17328,
+      "event": "birth",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1065098,
+        "state": "S",
+        "ppid": 1065097,
+        "pgid": 1065098,
+        "sid": 1065098,
+        "start_ticks": 1063955
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.18158,
+      "event": "who",
+      "generation": 1,
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50"
+    },
+    {
+      "t": 0.18164,
+      "event": "request",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.18263,
+      "event": "eof",
+      "instance": "64ab26d7-a24e-4a89-891b-87fe59983a50",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.19338,
+      "event": "response",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.19341,
+      "event": "request",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 10.20355,
+      "event": "successor_issue",
+      "generation": 2,
+      "request": 4,
+      "cause": "TimeoutError"
+    },
+    {
+      "t": 10.2036,
+      "event": "verdict",
+      "verdict": "fail"
+    },
+    {
+      "t": 10.20387,
+      "event": "cleanup_signal",
+      "role": "1/64ab26d7-a24e-4a89-891b-87fe59983a50/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 10.2039,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "SDK client.close",
+      "start": 0.1934,
+      "elapsed": 0.60066,
+      "samples": 7,
+      "states": {
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/server": "gone",
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/child": "active"
+      },
+      "clear_samples": {
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/server": 7,
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/child": 0
+      },
+      "clear_after": {
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/server": 6e-05
+      },
+      "current_at_deadline": {},
+      "zombie_count": 0,
+      "active_at_deadline": {
+        "1/64ab26d7-a24e-4a89-891b-87fe59983a50/child": {
+          "pid": 1065098,
+          "state": "S",
+          "ppid": 1057901,
+          "pgid": 1065098,
+          "sid": 1065098,
+          "start_ticks": 1063955
+        }
+      },
+      "verdict": "fail",
+      "reason": "Registered identity active at retirement deadline"
+    }
+  ],
+  "boot_tag": "83e88f2d4368e77c",
+  "additional_outcome": {
+    "verdict": "inconclusive",
+    "reason": "Operation or scenario deadline expired"
+  },
+  "verdict": "fail",
+  "reason": "Registered identity active at retirement deadline",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

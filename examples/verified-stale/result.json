@@ -1,0 +1,316 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 0.6,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00088,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1065030,
+        "state": "R",
+        "ppid": 1065029,
+        "pgid": 1065030,
+        "sid": 1065030,
+        "start_ticks": 1062811
+      }
+    },
+    {
+      "t": 0.00089,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.16071,
+      "event": "birth",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1065058,
+        "state": "S",
+        "ppid": 1065030,
+        "pgid": 1065030,
+        "sid": 1065030,
+        "start_ticks": 1062820
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.16176,
+      "event": "initialize_response",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.16643,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.16646,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.16683,
+      "event": "initialized",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.16726,
+      "event": "who_called",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.16822,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.17898,
+      "event": "birth",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1065059,
+        "state": "S",
+        "ppid": 1065058,
+        "pgid": 1065059,
+        "sid": 1065059,
+        "start_ticks": 1062827
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.18924,
+      "event": "who",
+      "generation": 1,
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc"
+    },
+    {
+      "t": 0.18931,
+      "event": "request",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.18961,
+      "event": "response",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.18963,
+      "event": "request",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.25245,
+      "event": "birth",
+      "instance": "edee0476-eaf1-4efe-9b47-8f24cb9b6f22",
+      "generation": 2,
+      "role": "server",
+      "identity": {
+        "pid": 1065060,
+        "state": "S",
+        "ppid": 1065030,
+        "pgid": 1065030,
+        "sid": 1065030,
+        "start_ticks": 1062830
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.25337,
+      "event": "initialize_response",
+      "instance": "edee0476-eaf1-4efe-9b47-8f24cb9b6f22",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.25357,
+      "event": "response",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.25358,
+      "event": "request",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.25395,
+      "event": "initialized",
+      "instance": "edee0476-eaf1-4efe-9b47-8f24cb9b6f22",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.254,
+      "event": "who_called",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.25426,
+      "event": "response",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.25432,
+      "event": "request",
+      "method": "who",
+      "request": 6
+    },
+    {
+      "t": 0.25456,
+      "event": "who_called",
+      "instance": "32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.25471,
+      "event": "response",
+      "method": "who",
+      "request": 6
+    },
+    {
+      "t": 0.25477,
+      "event": "successor_issue",
+      "generation": 2,
+      "request": 6,
+      "cause": "Violation"
+    },
+    {
+      "t": 0.27143,
+      "event": "birth",
+      "instance": "edee0476-eaf1-4efe-9b47-8f24cb9b6f22",
+      "generation": 2,
+      "role": "child",
+      "identity": {
+        "pid": 1065061,
+        "state": "S",
+        "ppid": 1065060,
+        "pgid": 1065061,
+        "sid": 1065061,
+        "start_ticks": 1062836
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.79027,
+      "event": "verdict",
+      "verdict": "fail"
+    },
+    {
+      "t": 0.7905,
+      "event": "cleanup_signal",
+      "role": "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79054,
+      "event": "cleanup_signal",
+      "role": "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79057,
+      "event": "cleanup_signal",
+      "role": "2/edee0476-eaf1-4efe-9b47-8f24cb9b6f22/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79059,
+      "event": "cleanup_signal",
+      "role": "2/edee0476-eaf1-4efe-9b47-8f24cb9b6f22/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79062,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "SDK client.close",
+      "start": 0.18962,
+      "elapsed": 0.60043,
+      "samples": 7,
+      "states": {
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/server": "active",
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/child": "active"
+      },
+      "clear_samples": {
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/server": 0,
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/child": 0
+      },
+      "clear_after": {},
+      "current_at_deadline": {
+        "2/edee0476-eaf1-4efe-9b47-8f24cb9b6f22/server": "active",
+        "2/edee0476-eaf1-4efe-9b47-8f24cb9b6f22/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/server": {
+          "pid": 1065058,
+          "state": "S",
+          "ppid": 1065030,
+          "pgid": 1065030,
+          "sid": 1065030,
+          "start_ticks": 1062820
+        },
+        "1/32e4ea6a-3021-441a-b4b2-4a37ecb8b4fc/child": {
+          "pid": 1065059,
+          "state": "S",
+          "ppid": 1065058,
+          "pgid": 1065059,
+          "sid": 1065059,
+          "start_ticks": 1062827
+        }
+      },
+      "verdict": "fail",
+      "reason": "Registered identity active at retirement deadline"
+    }
+  ],
+  "boot_tag": "84493f0b5c68e557",
+  "verdict": "fail",
+  "reason": "Two calls returned the same unexpected verified fixture",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

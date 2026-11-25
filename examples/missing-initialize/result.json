@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 0.6,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00082,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1064921,
+        "state": "R",
+        "ppid": 1064920,
+        "pgid": 1064921,
+        "sid": 1064921,
+        "start_ticks": 1062115
+      }
+    },
+    {
+      "t": 0.00083,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.08885,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.08887,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.14873,
+      "event": "birth",
+      "instance": "fe82b470-01d7-4588-8ee1-f6210284b838",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1064928,
+        "state": "S",
+        "ppid": 1064921,
+        "pgid": 1064921,
+        "sid": 1064921,
+        "start_ticks": 1062123
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.14928,
+      "event": "handshake_rejected",
+      "instance": "fe82b470-01d7-4588-8ee1-f6210284b838",
+      "generation": 1,
+      "protocol": null,
+      "method": "notifications/initialized"
+    },
+    {
+      "t": 0.15187,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.15189,
+      "event": "verdict",
+      "verdict": "inconclusive"
+    },
+    {
+      "t": 0.1521,
+      "event": "cleanup_signal",
+      "role": "1/fe82b470-01d7-4588-8ee1-f6210284b838/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.15213,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [],
+  "boot_tag": "ba994ff03f77f168",
+  "verdict": "inconclusive",
+  "reason": "Fixture rejected the MCP handshake",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}

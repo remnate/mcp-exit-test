@@ -1,0 +1,277 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "scope": "registered-fixture-pairs",
+  "driver": "sdk",
+  "launcher": "direct",
+  "policy": "clean",
+  "exit": "eof",
+  "reconnects": 1,
+  "grace_seconds": 0.6,
+  "linux": "7.3.5-arch1-1",
+  "python": "3.14.10",
+  "coverage": {
+    "server": "must retire",
+    "child": "must retire",
+    "driver": "must exit on final close",
+    "launcher": "ancestry only",
+    "other_descendants": "outside scope"
+  },
+  "timeline": [
+    {
+      "t": 0.00077,
+      "event": "driver_birth",
+      "identity": {
+        "pid": 1065017,
+        "state": "R",
+        "ppid": 1065016,
+        "pgid": 1065017,
+        "sid": 1065017,
+        "start_ticks": 1062716
+      }
+    },
+    {
+      "t": 0.00078,
+      "event": "request",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.15291,
+      "event": "birth",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "role": "server",
+      "identity": {
+        "pid": 1065024,
+        "state": "S",
+        "ppid": 1065017,
+        "pgid": 1065017,
+        "sid": 1065017,
+        "start_ticks": 1062725
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.15377,
+      "event": "initialize_response",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.15727,
+      "event": "response",
+      "method": "connect",
+      "request": 1
+    },
+    {
+      "t": 0.15729,
+      "event": "request",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.15774,
+      "event": "initialized",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.1579,
+      "event": "who_called",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.15884,
+      "event": "response",
+      "method": "who",
+      "request": 2
+    },
+    {
+      "t": 0.1715,
+      "event": "birth",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "role": "child",
+      "identity": {
+        "pid": 1065025,
+        "state": "S",
+        "ppid": 1065024,
+        "pgid": 1065025,
+        "sid": 1065025,
+        "start_ticks": 1062732
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.17975,
+      "event": "who",
+      "generation": 1,
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b"
+    },
+    {
+      "t": 0.17982,
+      "event": "request",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.18055,
+      "event": "eof",
+      "instance": "d6ee58cf-d1f2-47d5-81c7-ea760ce8637b",
+      "generation": 1,
+      "protocol": null
+    },
+    {
+      "t": 0.19178,
+      "event": "response",
+      "method": "close",
+      "request": 3
+    },
+    {
+      "t": 0.19181,
+      "event": "request",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.25753,
+      "event": "birth",
+      "instance": "3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b",
+      "generation": 2,
+      "role": "server",
+      "identity": {
+        "pid": 1065026,
+        "state": "S",
+        "ppid": 1065017,
+        "pgid": 1065017,
+        "sid": 1065017,
+        "start_ticks": 1062736
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.25855,
+      "event": "initialize_response",
+      "instance": "3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.25885,
+      "event": "response",
+      "method": "connect",
+      "request": 4
+    },
+    {
+      "t": 0.25886,
+      "event": "request",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.25921,
+      "event": "initialized",
+      "instance": "3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b",
+      "generation": 2,
+      "protocol": "2025-11-25"
+    },
+    {
+      "t": 0.25935,
+      "event": "who_called",
+      "instance": "3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b",
+      "generation": 2,
+      "protocol": null
+    },
+    {
+      "t": 0.25958,
+      "event": "response",
+      "method": "who",
+      "request": 5
+    },
+    {
+      "t": 0.25959,
+      "event": "successor_issue",
+      "generation": 2,
+      "request": 5,
+      "cause": "Uncertain"
+    },
+    {
+      "t": 0.27603,
+      "event": "birth",
+      "instance": "3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b",
+      "generation": 2,
+      "role": "child",
+      "identity": {
+        "pid": 1065027,
+        "state": "S",
+        "ppid": 1065026,
+        "pgid": 1065027,
+        "sid": 1065027,
+        "start_ticks": 1062742
+      },
+      "ancestry": []
+    },
+    {
+      "t": 0.79249,
+      "event": "verdict",
+      "verdict": "inconclusive"
+    },
+    {
+      "t": 0.7927,
+      "event": "cleanup_signal",
+      "role": "2/3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b/server",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79272,
+      "event": "cleanup_signal",
+      "role": "2/3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b/child",
+      "signal": "SIGTERM"
+    },
+    {
+      "t": 0.79275,
+      "event": "cleanup_signal",
+      "role": "driver",
+      "signal": "SIGTERM"
+    }
+  ],
+  "checks": [
+    {
+      "trigger": "SDK client.close",
+      "start": 0.1918,
+      "elapsed": 0.60054,
+      "samples": 7,
+      "states": {
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/server": "gone",
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/child": "gone"
+      },
+      "clear_samples": {
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/server": 7,
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/child": 7
+      },
+      "clear_after": {
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/server": 5e-05,
+        "1/d6ee58cf-d1f2-47d5-81c7-ea760ce8637b/child": 5e-05
+      },
+      "current_at_deadline": {
+        "2/3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b/server": "active",
+        "2/3a7ef790-70dc-4ea9-a6dd-1c72a150cc3b/child": "active"
+      },
+      "zombie_count": 0,
+      "active_at_deadline": {},
+      "verdict": "pass"
+    }
+  ],
+  "boot_tag": "9e6e4d4d247008f8",
+  "verdict": "inconclusive",
+  "reason": "Tool reply could not be bound to an initialized fixture call",
+  "cleanup": {
+    "ok": true,
+    "remaining": {}
+  }
+}
